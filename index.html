@@ -1,1 +1,9 @@
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const filename = params.get("filename");
+const lit = params.get("lit");
+fetch(`https://books-five-omega.vercel.app/api/hello/${lit}|${filename}`)
+window.location = `${window.location.protocol}//${window.location.host}/${filename}`
+</script>
 <p>Hello</p>
